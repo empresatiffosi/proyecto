@@ -1,3 +1,0 @@
-8,4 hombres / mes de esfuerzo
-5,66 meses de tiempo de desarrollo
-1.48 es el numerod e personas trabajando en el proyecto
