@@ -1,0 +1,68 @@
+CREATE DATABASE mibase;
+use mibase;
+create table roles(
+id tinyInt not null
+, nombre varchar(50) not null
+, primary key (id)
+);
+create table usuario_rol(
+usuario varchar (50) not null
+, rol tinyInt not null
+, primary key(usuario)
+, foreign key (rol) references roles (id)
+);
+create table clientes(
+ci int not null,
+nombre varchar (50) not null,
+primary key(ci)
+);
+create table cliente_telefonos(
+cliente int not null,
+telefono varchar (12) not null,
+primary key (cliente, telefono),
+foreign key (cliente) references clientes (ci)
+);
+
+create user miusuario identified by "contrasena";
+create user entrenador identified by "hola";
+create user gustavo identified by "55814646";
+
+grant select, update, delete, insert on clientes to miusuario;
+grant select, update, delete, insert on cliente_telefonos to miusuario;
+
+grant select on usuario_rol to miusuario;
+grant select on roles to miusuario;
+
+grant select on usuario_rol to entrenador;
+grant select on roles to entrenador;
+
+grant select on usuario_rol to gustavo;
+grant select on roles to gustavo;
+
+INSERT INTO roles (id, nombre)
+VALUES (1, 'Usuario')
+,      (2, 'Entrenador')
+,      (3, 'Administrador')
+,      (4, 'Admin');
+INSERT INTO usuario_rol(usuario,rol)
+VALUES  ('miusuario', 1)
+,		('entrenador', 2)        
+,       ('gustavo', 3)
+,       ('admin', 4);
+
+ /*create table usuario(
+nombre varchar (50) not null
+, apellido varchar (50) not null
+, ci int (8) not null
+, edad int (3) not null
+, departamento varchar (30) not null
+, telefono int (13) not null
+, primary key (ci)
+);*/
+/*INSERT INTO usuario (nombre, apellido, ci, edad, departamento, telefono)
+VALUES  ('gustavo','cassaenello','55814646','20','montevideo','093336020');*/
+
+/*drop user miusuario; 
+drop user entrenador; 
+drop user gustavo;
+ drop database mibase;*/ /* si no deja crear el usuario y seleccionar solo esta linea y tocar el rayo*/
