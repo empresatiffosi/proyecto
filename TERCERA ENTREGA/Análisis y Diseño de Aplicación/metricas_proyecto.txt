@@ -1,0 +1,12 @@
+8,4 hombres / mes de esfuerzo
+5,66 meses de tiempo de desarrollo
+1.48 es el numero de personas trabajando en el proyecto
+
+primera etapa del proyecto:
+tiempo utilizado: 1,83/5,66 del desarrollo total
+costo estimado del proyecto: $2574 dólares (Infraestructura + Equipos) + $1647 dólares (Salarios de Empleados)
+
+El cálculo del salario total sería: $300 (salario por empleado) * 3 (número de empleados) * 1.83 (meses) = $1647
+Por lo tanto, si cada empleado recibe un salario de $300 y trabajan durante 1.83 meses, el salario total para los 3 empleados sería de $1647 dólares.
+Costos por software= $779 dólares.
+Coste Total de la primera entrega= $2574 + $1647 + $779 = $5000 dólares.
